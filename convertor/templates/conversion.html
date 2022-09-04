@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Json to Fixture</title>
+</head>
+<body>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% else %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Convert">
+    </form>
+    {% endif %}
+</body>
+</html>
